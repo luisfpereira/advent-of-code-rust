@@ -10,3 +10,10 @@ fn main() {
         total_calories
     );
 }
+
+#[test]
+fn part2() {
+    let file_path = "input/input_example.dat";
+    let total_calories = solve(file_path);
+    assert_eq!(total_calories, 45000);
+}
