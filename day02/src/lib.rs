@@ -114,12 +114,7 @@ impl Score for FightResult {
     }
 }
 
-trait Duel {
-    fn fight(&self, other_shape: &Shape) -> FightResult;
-    fn choose_for_outcome(&self, result: FightResult) -> Shape;
-}
-
-impl Duel for Shape {
+impl Shape {
     fn fight(&self, other_shape: &Shape) -> FightResult {
         if self == other_shape {
             return FightResult::Draw;
